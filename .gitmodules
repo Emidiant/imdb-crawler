@@ -1,0 +1,3 @@
+[submodule "cinemagoer"]
+	path = cinemagoer
+	url = https://github.com/Emidiant/cinemagoer.git
