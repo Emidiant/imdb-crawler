@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 from imdb import Cinemagoer
 import requests
@@ -36,6 +38,7 @@ def main():
         data_films.append(get_info(ia, film_id, genre))
     df = pd.DataFrame(data_films,
                       columns=["movie_id", "original_title", "genres", "synopsis", "cover_url", "orig_genre"])
+    os.makedirs("csv", exist_ok=True)
     df.to_csv(f"csv/{genre.lower()}.csv", index=False)
 
 if __name__ == "__main__":

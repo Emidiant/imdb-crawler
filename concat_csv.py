@@ -5,6 +5,7 @@ import pandas as pd
 
 def main():
     cat_dict = {}
+    os.makedirs("csv_full", exist_ok=True)
     for file_name in os.listdir("csv"):
         if "_" in file_name:
             cat = file_name.split("_")[0]

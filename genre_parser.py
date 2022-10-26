@@ -50,7 +50,9 @@ def main():
     """
     # Documentary and short in separate script
     categories_list = [f.split(". ")[-1].strip() for f in categories.split("\n") if ". " in f]
+    os.makedirs("csv", exist_ok=True)
     file_name_list = os.listdir("csv")
+    # выбирается по 50 фильмов
     start_list = [0, 51, 101, 151, 201, 251]
     for start in start_list:
         j = 0
