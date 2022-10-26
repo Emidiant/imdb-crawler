@@ -1,7 +1,7 @@
 import os
 
 import pandas as pd
-from imdb import Cinemagoer
+from cinemagoer.imdb import Cinemagoer
 import requests
 from bs4 import BeautifulSoup as bs
 import re

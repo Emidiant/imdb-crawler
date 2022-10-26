@@ -1,7 +1,7 @@
 import os
 
 import pandas as pd
-from imdb import Cinemagoer
+from cinemagoer.imdb import Cinemagoer
 
 
 def get_info(ia, movie_id, genre):
