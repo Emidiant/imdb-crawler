@@ -52,8 +52,9 @@ def main():
     categories_list = [f.split(". ")[-1].strip() for f in categories.split("\n") if ". " in f]
     os.makedirs("csv", exist_ok=True)
     file_name_list = os.listdir("csv")
+    films_amount = 300
     # выбирается по 50 фильмов
-    start_list = [0, 51, 101, 151, 201, 251]
+    start_list = [1 + i * 50 for i in range(films_amount//50)]
     for start in start_list:
         j = 0
         for cat in categories_list:
